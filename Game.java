@@ -1,5 +1,3 @@
-package p1;
-
 import java.awt.Color;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
@@ -70,9 +68,3 @@ public class Game {
     }
 }
 
-//TODO:  Write your code to play the game here.
-//       You should make use of your Board class
-//       as well as the Display class I provided.
-//
-//         Note that I already imported java.awt.Color
-//       for you as you will need it.
