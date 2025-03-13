@@ -1,5 +1,3 @@
-package p1;
-
 import java.awt.Color;
 import dsUtils.Draw;
 
