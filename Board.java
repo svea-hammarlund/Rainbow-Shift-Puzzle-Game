@@ -1,5 +1,3 @@
-package p1;
-
 import java.awt.Color;
 import java.util.HashSet;
 import java.util.Random;
@@ -8,15 +6,6 @@ import java.util.Set;
 public class Board {
 	private Color[][] grid;
 
-	/**
-	 * Creates a new Board that is <code> count </code> moves away from a solved board.
-	 * Furthermore, the sequence of moves does not repeat any board configurations.
-	 * For example, the sequence of moves a11c would not be a valid sequence of 4 moves
-	 * for this constructor because the board configuration after "a" is identical to the
-	 * board configuration after "a11".
-	 * 
-	 * @param count the number of moves to make starting from the solved board
-	 */
 	public Board(int count) {
         Color[][] solvedState = {
                 {Display.RED, Display.ORANGE, Display.YELLOW, Display.GREEN, Display.BLUE, Display.VIOLET},
@@ -53,12 +42,7 @@ public class Board {
             }
 	}
 	
-	
-	/**
-	 * Creates a Board whose colors are arranged as they appear in a given grid.
-	 * 
-	 * @param grid the arrangement of colors for the board to be created.
-	 */
+
 	public Board(Color[][] layout) {
         grid = new Color[2][6];
 
@@ -69,11 +53,7 @@ public class Board {
         }
 	}
 	
-	/**
-	 * Updates the board to reflect a move being performed.
-	 * 
-	 * @param c the move to be performed
-	 */
+
 	public void move(char move) {
 		applyMove(move, grid);
     }
@@ -127,13 +107,6 @@ public class Board {
 	}
 	
 
-	/**
-	 * Determines if the board is in the solved configuration.  The board is solved
-	 * if the two cells in the same column contain the same color and the colors
-	 * appear in "rainbow order" from left to right (red, orange, yellow, green, blue, violet)
-	 * 
-	 * @return <code>true</code> if the board is solved.  
-	 */
 	public boolean isSolved() {
 		Color[] rainbow = {
 	            Display.RED, 
@@ -152,12 +125,6 @@ public class Board {
 	}
 	
 
-	/**
-	 * Returns the arrangement of the colors on the board as a 2 by 6
-	 * array of Color.
-	 * 
-	 * @return the arrangement of the colors on the board
-	 */
 	public Color[][] getGrid() {
 		Color[][] copy = new Color[2][6];
         for (int row = 0; row < 2; row++) {
